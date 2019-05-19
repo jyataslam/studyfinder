@@ -3,14 +3,30 @@
 <html>
     <head>
         <title>Study Finder</title>
+
         <link rel="shortcut icon" type="image/x-icon" href="./images/icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin|Rajdhani|Patua+One|IBM+Plex+Sans|Titillium+Web|Pacifico|Montserrat" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto" rel="stylesheet">
+
+        <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"> -->
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <!-- Google Maps API -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMjChvZRTpz-cZMNy4o1dFqhdy63Wq3CA"></script>
+
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="top.css">
         <link rel="stylesheet" href="style.css">
+
+        <!-- jQuery files -->
         <script src="tasks.js"></script>
         <script src="maps.js"></script>
         <script src="yelp.js"></script>
@@ -19,18 +35,25 @@
 
     <body>
         <div class="top">
-            <div class="drinkTitle"><span>Study Finder</span></div>
+            <div class="pageTitle"><span>Study Finder</span></div>
             <div class="aboutTitle"><span><a href="about.html">About Us</a></span></div>
-        </div>
-        <div class="searchContainer">
-            <!-- <input type="text" placeholder="Search Yelp" id="searchInput"> -->
-            <input type="text" placeholder="Location" id="locationInput">
-            <span class="input-group-addon submitSearch">
-                <span class="glyphicon glyphicon glyphicon-search"></span>
-            </span>
         </div>
         <div class="container">
             <div class="leftContainer">
+
+                <!-- <div class="input-group md-form form-sm form-2 pl-0">
+                        <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                          <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                        </div>
+                      </div> -->
+
+                <div class="searchContainer">
+                    <input type="text" placeholder="Location" id="locationInput">
+                    <span class="input-group-addon submitSearch">
+                        <span class="glyphicon glyphicon glyphicon-search"></span>
+                    </span>
+                </div>
                 <div id="map"></div>
             </div>
             <div class="rightContainer hide">

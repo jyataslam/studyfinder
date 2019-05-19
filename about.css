@@ -2,39 +2,66 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .person {
     width: 90%;
-    margin: 10px 0;
+    margin: 10px 0 0 0;
 }
 
 .person:nth-child(odd) {
     background-color: rgb(245, 245, 245);
 }
-
-.portrait {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.portrait > div > img {
+    width: 95%;
+    margin-left: 2.5%;
+    padding: 10px 0;
 }
 
-.portrait > img {
-    width: 70%;
-    padding: 10px 0 0;
-}
-
-.info > p {
-    margin: 10px 0 0;
-    padding: 0 20px;
+.info {
+    padding: 2.5%;
 }
 
 .links {
     margin: 0 auto 10px;
-    width: 30%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
+}
+
+.links > a {
+    margin-right: 10px;
+}
+
+.person:last-child {
+    margin-bottom: 5%;
+}
+
+@media screen and (min-width: 1025px) {
+    body {
+        /* background-color: hotpink; */
+    }
+
+    .person {
+        display: block;
+    }
+
+    .portrait {
+        /* background-color: blue; */
+        width: 45%;
+        vertical-align: top;
+        display: inline-block;
+    }
+
+    .portrait > div > img {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    .info {
+        width: 55%;
+        display: inline-block;
+        padding: 0;
+    }
+
+    .info > p:first-child {
+        margin-top: 10px;
+    }
 }
