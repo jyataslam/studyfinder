@@ -5,7 +5,6 @@ Mobile-responsive web-app for finding study locations and keeping track of tasks
 
 ### System Requirements
 
-
 ### Teams
 - Kenneth Li
 - Quan Le

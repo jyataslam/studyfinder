@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Study Finder</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./images/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin|Rajdhani|Patua+One|IBM+Plex+Sans|Titillium+Web|Pacifico|Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"> -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMjChvZRTpz-cZMNy4o1dFqhdy63Wq3CA"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="tasks.js"></script>
+        <script src="maps.js"></script>
+        <script src="yelp.js"></script>
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <div class="top">
+            <div class="drinkTitle"><span>Study Finder</span></div>
+            <div class="aboutTitle"><span><a href="about.html">About Us</a></span></div>
+        </div>
+        <div class="searchContainer">
+            <!-- <input type="text" placeholder="Search Yelp" id="searchInput"> -->
+            <input type="text" placeholder="Location" id="locationInput">
+            <span class="input-group-addon submitSearch">
+                <span class="glyphicon glyphicon glyphicon-search"></span>
+            </span>
+        </div>
+        <div class="container">
+            <div class="leftContainer">
+                <div id="map"></div>
+            </div>
+            <div class="rightContainer hide">
+                <div class="menu">
+                    <ul class="tabs">
+                        <li class="tab yelpTab">Yelp Results</li>
+                        <li class="tab tasksTab">My Tasks</li>
+                    </ul>
+                </div>
+                <div class="tabsContainer">
+                    <div class="tasksContainer hide">
+                        <div class="form-group input-group col-xs-12 col-lg-12 addTask">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-th-list"></span>
+                            </span>
+                            <input type="text" placeholder="New Task" id="inputTask">
+                            <span class="input-group-addon submitTask">
+                                <span class="glyphicon glyphicon glyphicon-plus">
+                                </span>
+                            </span>
+                        </div>
+                        <div class="allTasks">
+                            <table class="tasks">
+                                <thead>
+                                    <th class="col-xs-4 col-md-4">Progress</th>
+                                    <th class="col-xs-4 col-md-4">Task</th>
+                                    <th class="col-xs-4 col-md-4">Date</th>
+                                    <th class="col-xs-4 col-md-4">Delete</th>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
