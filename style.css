@@ -23,8 +23,6 @@ a:hover {
     transform: translate(-50%, -50%);
     left: 50%;
     top: 80px;
-    display: flex;
-    justify-content: center;
 }
 
 #locationInput {
@@ -32,10 +30,15 @@ a:hover {
     font-size: 1.5rem;
     text-align: left;
     width: 80%;
+    position: relative;
+    left: 10%;
     padding: 0 10px;
     text-transform: uppercase;
-    border-radius: 10px;
-    box-shadow: 3px 3px 3px grey;
+}
+
+.input-group-addon.submitSearch{
+    position: relative;
+    right: 10%;
 }
 
 .container {
@@ -114,17 +117,11 @@ li.active {
     flex-wrap: wrap;
     align-items: center;
     overflow-y: scroll;
-    /* background-image: url('images/beer.jpg'); */
-    /* background-repeat: no-repeat;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     right: 0;
-    /* transition: all .35 linear; */
     overflow: scroll;
 }
 
@@ -168,7 +165,6 @@ li.active {
 .resultDiv {
     display: inline-block;
     width: 100%;
-    /* border: 1px solid black; */
     box-sizing: border-box;
 }
 
@@ -228,6 +224,7 @@ li.active {
     width: 100%;
     background-color: white;
     z-index: 2;
+    display: none;
 }
 
 #inputTask {
