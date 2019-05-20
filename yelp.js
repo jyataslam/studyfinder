@@ -16,7 +16,7 @@ class YelpData {
         this.getDataFromYelp(this.locationInput);
     }
 
-    getDataFromYelp(location){
+    getDataFromYelp (location) {
         $.ajax({
             url: 'yelp.php',
             dataType: 'json',
@@ -110,13 +110,13 @@ class YelpData {
         this.clickHandler();
     }
 
-    handleYelpError(response){
+    handleYelpError (response) {
         console.log('yelp error response', response);
 
         alert('yelp error');
     }
 
-    toggleResultsWindow() {
+    toggleResultsWindow () {
         $("#yelp").toggle();
 
         if ($("#yelp")) {
@@ -126,7 +126,7 @@ class YelpData {
         }
     }
 
-    getBusinessData() {
+    getBusinessData () {
         const resultID = $(this).attr('resultID');
         $.ajax({
             url: 'yelpid.php',
@@ -145,7 +145,7 @@ class YelpData {
         }) 
     }
 
-    clickHandler() {
+    clickHandler () {
         $('.restaurantImage').on('click', this.getBusinessData);
         
         $('.modal-close').on('click', () => {
@@ -162,8 +162,7 @@ class YelpData {
         this.toggleModal(photosArray);
     }
 
-    toggleModal(photosArray){
-        
+    toggleModal (photosArray) {
         $('.modalImagesDiv').empty();
         $('.modalImagesDiv')
             .append('<img class="modalImage" class="modalImage" src="'+photosArray[0]+'"/>')
@@ -171,6 +170,5 @@ class YelpData {
             .append('<img class="modalImage" class="modalImage" src="'+photosArray[2]+'"/>');
         $('.modal').css('display', 'block').append(".modalImagesDiv");
         $("#yelp").append(".modal");
-        ;
     }
 }
