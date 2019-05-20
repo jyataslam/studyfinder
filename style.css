@@ -23,8 +23,6 @@ a:hover {
     transform: translate(-50%, -50%);
     left: 50%;
     top: 80px;
-    /* display: flex; */
-    justify-content: center;
 }
 
 #locationInput {
@@ -36,8 +34,6 @@ a:hover {
     left: 10%;
     padding: 0 10px;
     text-transform: uppercase;
-    /* border-radius: 10px; */
-    /* box-shadow: 3px 3px 3px grey; */
 }
 
 .input-group-addon.submitSearch{
@@ -169,7 +165,6 @@ li.active {
 .resultDiv {
     display: inline-block;
     width: 100%;
-    /* border: 1px solid black; */
     box-sizing: border-box;
 }
 
