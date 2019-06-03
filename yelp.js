@@ -1,6 +1,7 @@
 class YelpData {
     constructor(locationInput, mapCallbacks){
         this.results = null;
+        this.scrollDiv = null;
         this.locationInput = locationInput;
         this.generateMarkerCallback = mapCallbacks.generateMarkerCallback;
         this.removeMarkersCallback = mapCallbacks.removeMarkersCallback;
@@ -41,7 +42,13 @@ class YelpData {
         
         $('#yelp').remove();
 
-        var yelpDomElement = $("<div>").attr('id', 'yelp')
+        var yelpDomElement = $("<div>").attr('id', 'yelp');
+
+        let loadingSpan = $('<span>').addClass('sr-only').text('Loading...');
+        let spinnerDiv = $('<div>').addClass('spinner-border');
+        let loadingContainer = $('<div>').addClass('d-flex justify-content-center loading-container');
+
+        yelpDomElement.append(loadingContainer).append(spinnerDiv).append(loadingSpan);
 
         for (var i = 0; i < this.results.businesses.length; i++) {
             const resultInfo = {
@@ -66,7 +73,9 @@ class YelpData {
                 }
             }
 
-            var newDomElement = $("<div>").addClass('resultDiv restaurantDivider');
+            resultInfo['address'] = displayAddress;
+
+            var newDomElement = $("<div>").attr("href", `#${resultInfo.id}`).addClass('resultDiv restaurantDivider');
             var categories = "";
 
             for (var j=0; j<this.results.businesses[i].categories.length; j++) {
@@ -85,7 +94,7 @@ class YelpData {
                         target: "_blank"
                     }))
                     .append($("<p>").addClass('restaurantLocation').text('Address: ' + displayAddress))
-                    .append($("<p>").addClass('restaurantLocation').text('Phone: ' + resultInfo.phone))
+                    .append($("<p>").addClass('restaurantPhone').text('Phone: ' + resultInfo.phone))
                     .append($("<p>").addClass('restaurantPrice').text('Price: ' + resultInfo.price))
                     .append($("<p>").addClass('restaurantRating').text('Rating: ' + resultInfo.rating))
                     .append(
@@ -110,9 +119,7 @@ class YelpData {
         this.clickHandler();
     }
 
-    handleYelpError (response) {
-        console.log('yelp error response', response);
-
+    handleYelpError () {
         alert('yelp error');
     }
 
@@ -149,7 +156,7 @@ class YelpData {
         $('.restaurantImage').on('click', this.getBusinessData);
         
         $('.modal-close').on('click', () => {
-            $('.modal').css('display', 'none')
+            $('#modalCarousel').css('display', 'none')
         }); 
 
         $('.restaurantInfo').on('click', () => {
@@ -163,12 +170,25 @@ class YelpData {
     }
 
     toggleModal (photosArray) {
-        $('.modalImagesDiv').empty();
-        $('.modalImagesDiv')
-            .append('<img class="modalImage" class="modalImage" src="'+photosArray[0]+'"/>')
-            .append('<img class="modalImage" class="modalImage" src="'+photosArray[1]+'"/>')
-            .append('<img class="modalImage" class="modalImage" src="'+photosArray[2]+'"/>');
-        $('.modal').css('display', 'block').append(".modalImagesDiv");
-        $("#yelp").append(".modal");
+        $('.carousel-inner').empty();
+      
+        for (var index=0; index<photosArray.length; index++) {
+            var image = $("<div>", {
+                "style": 'background-image: url('+photosArray[index]+')',
+                "class": "image"
+            })
+
+            if (index === 0) {
+                var modalImage = $("<div>").addClass("item").addClass("active");
+            } else {
+                var modalImage = $("<div>").addClass("item");
+            }
+            
+            modalImage.append(image);
+
+            $('.carousel-inner').append(modalImage);
+        }
+
+        $('#modalCarousel').css('display', 'block');
     }
 }

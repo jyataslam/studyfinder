@@ -6,9 +6,11 @@
 
         <link rel="shortcut icon" type="image/x-icon" href="./images/icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin|Rajdhani|Patua+One|IBM+Plex+Sans|Titillium+Web|Pacifico|Montserrat" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin|Rajdhani|Patua+One|IBM+Plex+Sans|Titillium+Web|Pacifico|Montserrat"
+            rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto" rel="stylesheet">
 
         <!-- jQuery -->
@@ -34,6 +36,25 @@
     </head>
 
     <body>
+        <!-- Yelp Photos Modal -->
+        <div id="modalCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#modalCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#modalCarousel" data-slide-to="1"></li>
+                <li data-target="#modalCarousel" data-slide-to="2"></li>
+            </ol>
+            <span class="modal-close">&times;</span>
+            <div class=" carousel-inner"></div>
+            <a class="left carousel-control" href="#modalCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#modalCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- Yelp Photos Modal End -->
         <div class="top">
             <div class="pageTitle"><span>Study Finder</span></div>
             <div class="aboutTitle"><span><a href="about.html">About Us</a></span></div>
@@ -42,21 +63,24 @@
             <div class="leftContainer">
                 <div class="searchContainer">
                     <div class="input-group input-group-lg">
-                            <input type="text" class="form-control" placeholder="Location" id="locationInput">
-                            <span class="input-group-addon submitSearch"><i class=" glyphicon glyphicon-search"></i></span>
+                        <input type="text" class="form-control" placeholder="what city do you want to study in?"
+                            id="locationInput" onfocus="this.value = ''">
+                        <span class="input-group-addon submitSearch"><i class=" glyphicon glyphicon-search"></i></span>
                     </div>
                 </div>
                 <div id="map"></div>
+                <button class="save-btn btn btn-primary hide">Save Result</button>
             </div>
             <div class="rightContainer hide">
                 <div class="menu">
                     <ul class="tabs">
-                        <li class="tab yelpTab">Yelp Results</li>
+                        <li class="tab yelpTab">Results</li>
                         <li class="tab tasksTab">My Tasks</li>
+                        <li class="tab tasksTab">Saved Results</li>
                     </ul>
                 </div>
                 <div class="tabsContainer">
-                    <div class="tasksContainer">
+                    <div class="tasksContainer hide">
                         <div class="form-group input-group col-xs-12 col-lg-12 addTask">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-th-list"></span>
@@ -69,8 +93,8 @@
                         </div>
                         <div class="allTasks">
                             <table class="tasks">
-                                <thead>
-                                    <th class="col-xs-4 col-md-4">Progress</th>
+                                <thead class="tasks-header">
+                                    <th class="col-xs-4 col-md-4">Status</th>
                                     <th class="col-xs-4 col-md-4">Task</th>
                                     <th class="col-xs-4 col-md-4">Date</th>
                                     <th class="col-xs-4 col-md-4">Delete</th>
@@ -78,8 +102,11 @@
                             </table>
                         </div>
                     </div>
+                    <div class="saved hide"></div>
                 </div>
             </div>
         </div>
+        <div class="loadingScreen"></div>
     </body>
+
 </html>
