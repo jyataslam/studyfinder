@@ -15,7 +15,7 @@
   1. In the terminal, clone this repo:
      - `git clone https://github.com/[your_username]/studyfinder.git`
   2. Use XAMPP, MAMP, or a similar program to start your local Apache and MySQL servers
-     - Point root directory to root of the cloned, Studyfinder folder
+     - Point root directory to the root folder `studyfinder/`
      - Set Apache port to the defined port in the proxy > target property found in the package.json file
      - Import the SQL database into phpMyAdmin or similar found in the public/api/data folder
 
