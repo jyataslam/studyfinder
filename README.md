@@ -17,8 +17,6 @@
   2. Create new file `keys.js` in root director `/studyfinder/`. Add Yelp and Google Maps API keys into `keys.js` file using `keys.js.config` file as template.
   3. Use XAMPP, MAMP, or a similar program to start your local Apache and MySQL servers
      - Point root directory to the root folder `/studyfinder/`
-     - Set Apache port to the defined port in the proxy > target property found in the package.json file
-     - Import the SQL database into phpMyAdmin or similar found in the public/api/data folder
   4. Open a browser and navigate to `localhost:[your_port_number]`
 
 ## Team
