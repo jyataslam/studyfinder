@@ -13,11 +13,11 @@
 
 ## Setup Instructions
   1. In the terminal, clone this repo:
-    - `git clone https://github.com/[your_username]/mystertravel.git`
+     - `git clone https://github.com/[your_username]/studyfinder.git`
   2. Use XAMPP, MAMP, or a similar program to start your local Apache and MySQL servers
-    - Point root directory to /public of the cloned, Outback folder
-    - Set Apache port to the defined port in the proxy > target property found in the package.json file
-    - Import the SQL database into phpMyAdmin or similar found in the public/api/data folder
+     - Point root directory to root of the cloned, Studyfinder folder
+     - Set Apache port to the defined port in the proxy > target property found in the package.json file
+     - Import the SQL database into phpMyAdmin or similar found in the public/api/data folder
 
 ## Team
 - Kenneth Li (https://github.com/likenhp)
