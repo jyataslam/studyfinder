@@ -1,5 +1,6 @@
 class YelpData {
-    constructor(locationInput, mapCallbacks){
+    constructor(locationInput, mapCallbacks, apiKey){
+        this.key = apiKey;
         this.results = null;
         this.scrollDiv = null;
         this.locationInput = locationInput;
@@ -13,6 +14,7 @@ class YelpData {
         this.handleBusinessModal = this.handleBusinessModal.bind(this);
         this.handleBusinessModal = this.handleBusinessModal.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
+        this.getDataFromYelp = this.getDataFromYelp.bind(this);
 
         this.getDataFromYelp(this.locationInput);
     }
@@ -23,7 +25,7 @@ class YelpData {
             dataType: 'json',
             method: 'GET',
             data: {
-                'apikey': '_OTDIm5KUtFhOupgc4hIxc-3pHB_Ksl5BQvHSkkZoLUN_OlZZ8Yz1bX0FojgG7N76q8JtoyKS8y7eFtsSgYVD4eGCgfSr5Qz4C00lsHg2TvqiQWHwG8VXgi5A3bgXHYx',
+                'apikey': this.key,
                 'term': 'study',
                 'location': location
             },

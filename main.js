@@ -53,12 +53,12 @@ function clickHandler () {
         let locationInput = $('#locationInput').val().replace(' ', '_');
 
         if (e.keyCode === 13 && locationInput !== "" && $(".leftContainer").hasClass("active")) {
-            yelpData = new YelpData (locationInput, mapCallbacks);
+            yelpData = new YelpData (locationInput, mapCallbacks, keys.yelp);
             $('.yelpTab').addClass('active');
             $(".tasksTab").removeClass("active");
             $('.tasksContainer').removeClass('active').addClass('hide');
         } else if (e.keyCode === 13 && locationInput !== "") {
-            yelpData = new YelpData (locationInput, mapCallbacks);
+            yelpData = new YelpData (locationInput, mapCallbacks, keys.yelp);
             $(".leftContainer").toggleClass("active");
             $(".searchContainer").toggleClass("active");
             $('.yelpTab').addClass('active');
@@ -70,7 +70,7 @@ function clickHandler () {
         var locationInput = $('#locationInput').val().replace(' ', '_');
 
         if (search !== "") {
-            yelpData = new YelpData (search, locationInput, mapCallbacks);
+            yelpData = new YelpData (search, locationInput, mapCallbacks, keys.yelp);
         }
 
         showYelpTab();
