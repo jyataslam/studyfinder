@@ -4,6 +4,7 @@
 <br>Mobile-responsive web-app for finding study locations and keeping track of tasks JavaScript, jQuery, and PHP
 
 ## System Requirements
+- Windows: XAMPP, Mac: MAMP
 
 ## Teams
 - Kenneth Li (https://github.com/likenhp)
