@@ -8,6 +8,12 @@
 - Use localstorage to keep track of tasks and potential study locations
 - Maps displayed using Google Maps API to help users visualize where results are
 
+## Technologies Used
+  - JavaScript
+  - jQuery
+  - HTML/CSS
+  - PHP
+
 ## System Requirements
 - Windows: XAMPP, Mac: MAMP
 
