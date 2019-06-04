@@ -19,7 +19,7 @@
      - Point root directory to the root folder `/studyfinder/`
      - Set Apache port to the defined port in the proxy > target property found in the package.json file
      - Import the SQL database into phpMyAdmin or similar found in the public/api/data folder
-  4. Open a browser and navigate to localhost:[your_port_number]
+  4. Open a browser and navigate to `localhost:[your_port_number]`
 
 ## Team
 - Kenneth Li (https://github.com/likenhp)
