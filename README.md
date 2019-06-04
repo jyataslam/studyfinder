@@ -1,5 +1,5 @@
 # Study Finder
-<img src="https://readme-screenshots.s3-us-west-1.amazonaws.com/studyfinder1.png" width="33%" height="auto"> <img src="https://readme-screenshots.s3-us-west-1.amazonaws.com/studyfinder2.png" width="33%" height="auto">
+<img src="https://readme-screenshots.s3-us-west-1.amazonaws.com/studyfinder1.png" width="33%" height="auto"> <img src="https://readme-screenshots.s3-us-west-1.amazonaws.com/studyfinder2.png" width="33%" height="auto"> <img src="https://readme-screenshots.s3-us-west-1.amazonaws.com/studyfinder3.png" width="33%" height="auto">
 <a href="https://studyfinder.quandhle.com/">studyfinder.quandhle.com</a>
 <br>Mobile-responsive web-app for finding study locations and keeping track of tasks JavaScript, jQuery, and PHP
 
